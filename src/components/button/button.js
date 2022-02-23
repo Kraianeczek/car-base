@@ -1,6 +1,8 @@
+import styles from './button.module.scss'
+
 const Button = () => {
     return(
-        <button>Change availability</button>
+        <button className={styles.button}>Change availability</button>
     )
 }
 
