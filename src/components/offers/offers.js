@@ -21,7 +21,7 @@ const Offers = () => {
                 <td className={styles.text}>{offer.model}</td>
                 <td className={styles.text}>{offer.engine}</td>
                 <td className={styles.availability}>
-                    <span className={' fa ' + (offer.availability ? 'fa fa-check' : 'fa-times') + ' ' + (offer.availability ? styles.isTrue : styles.isFalse)}></span>
+                    <span className={styles.icon + ' baka fa ' + (offer.availability ? 'fa fa-check' : 'fa-times') + ' ' + (offer.availability ? styles.isTrue : styles.isFalse)}></span>
                 </td>
                 <td><button onClick={() => handleSubmit(offer)}>change</button></td></tr>  
         )
