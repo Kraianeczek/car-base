@@ -1,6 +1,6 @@
 const initialState = {
-    offers: [
-    ]
+  offers: [
+  ]
 }
 
 export default initialState;
