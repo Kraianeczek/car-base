@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toggleButton } from "../../redux/offersRedux";
+import { removeOffer, toggleButton } from "../../redux/offersRedux";
 import styles from './offers.module.scss'
 
 const Offers = () => {
@@ -14,6 +14,11 @@ const Offers = () => {
         dispatch(toggleButton(offer.availability));
     }
 
+    const deleteSubmit = (offer) => {
+        console.log('wod')
+        dispatch(removeOffer(offer));
+    }
+
     return(
         offers.map(offer =>
             <tr className={(offer.availability ? styles.rowIsTrue : styles.rowIsFalse)}>
@@ -23,7 +28,7 @@ const Offers = () => {
                 <td className={styles.availability}>
                     <span className={styles.icon + ' baka fa ' + (offer.availability ? 'fa fa-check' : 'fa-times') + ' ' + (offer.availability ? styles.isTrue : styles.isFalse)}></span>
                 </td>
-                <td><button onClick={() => handleSubmit(offer)}>change</button></td></tr>  
+                <td className={styles.buttons}><button onClick={() => handleSubmit(offer)} className={styles.button}>Change</button><button onClick={() => deleteSubmit(offer)} className={styles.button}>Delete</button></td></tr>  
         )
     )
 }

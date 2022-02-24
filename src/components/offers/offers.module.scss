@@ -6,32 +6,36 @@
 
 .rowIsFalse {
     background-color: red;
+    opacity: 70%;
+}
+
+.rowIsFalse:hover{
+    opacity: 100%;
 }
 
 .rowIsTrue {
-    background-color: green;
+    background-color: #66ff66;
+    opacity: 70%;
+}
+
+.rowIsTrue:hover {
+    opacity: 100%;
 }
 
 .isTrue {
     width: 30px;
     height: 30px;
     font-size: 20px;
-    background-color: blue;
-    color: green;
-    border-radius: 50%;
+    color: #004d00;
     text-align: center;
-    border: 3px solid #000;
 }
 
 .isFalse {
     width: 30px;
     height: 30px;
     font-size: 20px;
-    background-color: black;
-    color: red;
-    border-radius: 50%;
+    color: black;
     text-align: center;
-    border: 3px solid #000;
 }
 
 .availability {
@@ -48,3 +52,21 @@
     transform: translate(-50%, -50%);
 }
 
+.buttons {
+    text-align: center;
+}
+
+.button {
+    margin: 6px;
+    font-size: 13px;
+    color: #00394d;
+    font-weight: 700;
+    border: 4px outset #00394d;
+    border-radius: 5px;
+    background-color: #e6ffff;
+    cursor: pointer;
+}
+
+.button:hover {
+    border-style: inset;
+}
